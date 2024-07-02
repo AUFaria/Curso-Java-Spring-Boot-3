@@ -1,5 +1,7 @@
 package br.com.projetospringboot3.mvc;
 
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
@@ -11,6 +13,9 @@ public class Customer {
 	@Size(min = 3, message = "Length must be higher than 3")
 	private String lastName;
 
+	@Min(value = 0, message = "Must be greater than or equal to 0")
+	@Max(value = 10, message = "Must be less than or equal to 10")
+	private int freePasses;
 
 
 	public String getFirstName() {
@@ -27,5 +32,13 @@ public class Customer {
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
+	}
+
+	public int getFreePasses() {
+		return freePasses;
+	}
+
+	public void setFreePasses(int freePasses) {
+		this.freePasses = freePasses;
 	}
 }

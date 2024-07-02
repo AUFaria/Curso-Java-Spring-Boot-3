@@ -35,6 +35,15 @@
         <br>
         <br>
 
+        <label for="freePasses">Free Passes:</label>
+        <input type="text" name="freePasses" id="freePasses" th:field="*{freePasses}">
+
+        <small th:if="${#fields.hasErrors('freePasses')}" th:errors="*{freePasses}" class="error-message"></small>
+
+
+        <br>
+        <br>
+
         <input type="submit" />
 
     </form>
