@@ -40,6 +40,13 @@
 
         <small th:if="${#fields.hasErrors('freePasses')}" th:errors="*{freePasses}" class="error-message"></small>
 
+        <br>
+        <br>
+
+        <label for="postalCode">Postal Code:</label>
+        <input type="text" name="postalCode" id="postalCode" th:field="*{postalCode}">
+
+        <small th:if="${#fields.hasErrors('postalCode')}" th:errors="*{postalCode}" class="error-message"></small>
 
         <br>
         <br>
