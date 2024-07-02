@@ -35,6 +35,10 @@ public class CustomerController {
 			BindingResult bindingResult
 	) {
 
+		System.out.println("Binding result: " + bindingResult.toString());
+
+		System.out.println("\n\n\n");
+
 		return bindingResult.hasErrors() ? "customer-form" : "customer-result";
 	}
 }
