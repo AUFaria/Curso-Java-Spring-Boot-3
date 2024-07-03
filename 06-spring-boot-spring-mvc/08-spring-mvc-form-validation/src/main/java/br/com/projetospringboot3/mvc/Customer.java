@@ -1,5 +1,6 @@
 package br.com.projetospringboot3.mvc;
 
+import br.com.projetospringboot3.mvc.validation.CourseCode;
 import jakarta.validation.constraints.*;
 
 public class Customer {
@@ -17,6 +18,9 @@ public class Customer {
 
 	@Pattern(regexp = "^[a-zA-Z0-9]{5}", message = "Only 5 characters/digits")
 	private String postalCode;
+
+	@CourseCode(value = "TEST", message = "Must start with TEST")
+	private String courseCode;
 
 
 	public String getFirstName() {
@@ -49,5 +53,13 @@ public class Customer {
 
 	public void setPostalCode(String postalCode) {
 		this.postalCode = postalCode;
+	}
+
+	public String getCourseCode() {
+		return courseCode;
+	}
+
+	public void setCourseCode(String courseCode) {
+		this.courseCode = courseCode;
 	}
 }
