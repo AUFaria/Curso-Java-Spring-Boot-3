@@ -1,0 +1,3 @@
+Lessons 259 ~ 271 were skipped due to redundancy.
+
+Topics were already addressed with coding exercises in Section 5.
